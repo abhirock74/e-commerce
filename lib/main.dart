@@ -4,39 +4,15 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget{
+  const  MyApp({super.key});
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return MaterialApp(
+      home:Scaffold(),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('mYojana'),
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {
-              // Add your onPressed logic here
-            },
-          ),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                // Add your onPressed logic here
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.more_vert),
-              onPressed: () {
-                // Add your onPressed logic here
-              },
-            ),
-          ],
-        ),
-        body: Center(
-          child: Text('Hello, Every one!'),
-        ),
-      ),
     );
   }
 }
+
